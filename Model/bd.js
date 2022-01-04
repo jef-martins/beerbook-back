@@ -6,12 +6,12 @@ const dbName = 'db_cerveja';
 const db = client.db(dbName);
 const collection = db.collection('cervejas');
 
-const init = async () => {
-      await client.connect();
+const init = async() => {
+    await client.connect();
 }
 init()
-  .then(console.log(""))
-  .catch(client.close());
-  //.finally(() => client.close());
+    .then(console.log(""))
+    .catch(client.close());
+//.finally(() => client.close());
 
 module.exports = collection;
